@@ -1,0 +1,226 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333; /* Color oscuro para modo claro */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('gif/library.gif') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:100px;
+    flex-wrap: wrap;
+}
+
+.search-bar select,
+.search-bar input[type="text"] {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 200px;
+    color: #333; /* Color oscuro para modo claro */
+    background-color: white;
+}
+
+.search-bar select::placeholder,
+.search-bar input[type="text"]::placeholder {
+    color: #aaa; /* Color del texto del placeholder */
+}
+
+.toggle-container {
+    margin: 10px 0;
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle-label {
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.toggle:checked + .toggle-label {
+    background-color: #fff;
+    color: #444;
+    border: 1px solid #444;
+}
+
+.results {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333; /* Color oscuro para modo claro */
+}
+
+.result {
+    background-color: white;
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: inline-block;
+    width: 220px;
+    vertical-align: top;
+    color: #333; /* Color oscuro para modo claro */
+}
+
+.result img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.result h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-family: 'Merriweather', serif;
+}
+
+.result p {
+    margin: 5px 0; /* Ajuste de margen */
+    font-size: 14px;
+    color: #555;
+}
+
+/* Estilos para modo nocturno */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+header.dark-mode {
+    background-color: #444;
+    color: white;
+}
+
+.results.dark-mode {
+    background-color: rgba(34, 34, 34, 0.8);
+    color: white;
+}
+
+.result.dark-mode {
+    background-color: #2c2c2c;
+    color: white;
+    border: 1px solid #555;
+}
+
+.result.dark-mode h3, 
+.result.dark-mode p {
+    color: white;
+}
+
+.result.dark-mode img {
+    filter: brightness(0.8);
+}
+
+.toggle-label.dark-mode {
+    background-color: #fff;
+    color: #444;
+}
+
+.search-bar.dark-mode select,
+.search-bar.dark-mode input[type="text"] {
+    background-color: #555;
+    color: white;
+    border: 1px solid #777;
+}
+
+.search-bar.dark-mode select::placeholder,
+.search-bar.dark-mode input[type="text"]::placeholder {
+    color: #bbb;
+}
+
+.search-bar input[type="text"] {
+    color: #333; /* Asegura que el texto sea visible en modo claro */
+}
+
+.search-bar.dark-mode input[type="text"] {
+    color: white; /* Asegura que el texto sea visible en modo oscuro */
+}
+
+header.dark-mode::before {
+    opacity: 0.2;
+}
+
+.header-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toggle-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-label {
+    margin-left: 8px;
+}
+
+.toggle-label img {
+    width: 24px;
+    height: 24px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}

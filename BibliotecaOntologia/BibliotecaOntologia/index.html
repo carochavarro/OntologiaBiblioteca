@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>biblioteca</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="toggle-container">
+            <input type="checkbox" id="modeToggle" class="toggle">
+            <label for="modeToggle" class="toggle-label"><img src="gif/luna.png" alt="Modo Nocturno"></label>
+        </div>
+        <div class="header-content">
+            <h1>Biblioteca</h1>
+            <div class="search-bar">
+                <select id="searchType">
+                    <option value="nombreLibro">Nombre del Libro</option>
+                    <option value="encuadernacion">Encuadernación</option>
+                    <option value="editorial">Editorial</option>
+                    <option value="anio">Año de Publicación</option>
+                    <option value="idioma">Idioma</option>
+                    <option value="genero">Género</option>
+                    <option value="autor">Autor</option>
+                    <option value="isbn">ISBN</option>
+                   
+                </select>
+                <input type="text" id="searchInput" placeholder="Ingrese su búsqueda">
+            </div>
+        </div>
+    </header>
+    <div id="results" class="results">
+        <div id="loadingIcon" style="display: none;">
+            <img src="gif/loading.gif" alt="Cargando...">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<footer>
+    <div class="footer-bottom">
+        &copy; 2024 Biblioteca | Santiago Cabrera - Carolina Chavarro
+    </div>
+</footer>
+</html>
